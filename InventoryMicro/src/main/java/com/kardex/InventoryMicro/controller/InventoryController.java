@@ -38,7 +38,7 @@ public class InventoryController {
     @PutMapping("/updateInventory")
     public ResponseWrapper<InventoryDto> updateProduct(@Valid @RequestBody InventoryDto updatedInventoryDto) {
         ResponseWrapper<InventoryDto> productResponse = inventoryService.updateInventory(updatedInventoryDto);
-        return new ResponseWrapper<>("Product update with success", productResponse.getData());
+        return new ResponseWrapper<>("Product-Inventory update with success", productResponse.getData());
     }
 
     @GetMapping(value="/productConsu/{inventoryId}")
